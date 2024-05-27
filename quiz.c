@@ -3,9 +3,15 @@
 #include <string.h>
 #include "quiz.h"
 
+<<<<<<< Updated upstream
 QuizQuestion *createQuiz(int *size)
 {
     *size = 10;
+=======
+// Questions pour le thème Python
+QuizQuestion* createPythonQuiz(int *size) {
+    *size = 3;
+>>>>>>> Stashed changes
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel est le résultat de l'expression suivante en Python : 5 * 3 + 2 / 2 - 1?");
@@ -13,78 +19,151 @@ QuizQuestion *createQuiz(int *size)
     questions[0].options[1] = strdup("B. 7");
     questions[0].options[2] = strdup("C. 8");
     questions[0].options[3] = strdup("D. 9");
-    questions[0].correct_option = 'C';
+    questions[0].correct_option = 'A';
 
-    questions[1].question = strdup("Combien de bits y a-t-il dans un octet?");
-    questions[1].options[0] = strdup("A. 4");
-    questions[1].options[1] = strdup("B. 8");
-    questions[1].options[2] = strdup("C. 16");
-    questions[1].options[3] = strdup("D. 32");
+    questions[1].question = strdup("Quel mot-clé est utilisé pour définir une fonction en Python?");
+    questions[1].options[0] = strdup("A. func");
+    questions[1].options[1] = strdup("B. def");
+    questions[1].options[2] = strdup("C. function");
+    questions[1].options[3] = strdup("D. define");
     questions[1].correct_option = 'B';
 
-    questions[2].question = strdup("Quel est le langage de programmation utilisé pour créer ce quiz?");
-    questions[2].options[0] = strdup("A. Python");
-    questions[2].options[1] = strdup("B. Java");
-    questions[2].options[2] = strdup("C. C");
-    questions[2].options[3] = strdup("D. JavaScript");
-    questions[2].correct_option = 'C';
-
-    questions[3].question = strdup("Quel langage est principalement utilisé pour le développement d'applications mobiles sur la plateforme iOS?");
-    questions[3].options[0] = strdup("A. Python");
-    questions[3].options[1] = strdup("B. C++");
-    questions[3].options[2] = strdup("C. Swift");
-    questions[3].options[3] = strdup("D. Java");
-    questions[3].correct_option = 'C';
-
-    questions[4].question = strdup("Quelle est la syntaxe correcte pour déclarer une fonction en langage C?");
-    questions[4].options[0] = strdup("A. function myFunction()");
-    questions[4].options[1] = strdup("B. void myFunction()");
-    questions[4].options[2] = strdup("C. def myFunction()");
-    questions[4].options[3] = strdup("D. func myFunction()");
-    questions[4].correct_option = 'B';
-
-    questions[5].question = strdup("Quel est le terme utilisé pour désigner un ensemble de règles qui dictent la structure d'un programme informatique?");
-    questions[5].options[0] = strdup("A. Syntaxe");
-    questions[5].options[1] = strdup("B. Bibliothèque");
-    questions[5].options[2] = strdup("C. Algorithme");
-    questions[5].options[3] = strdup("D. Programmation");
-    questions[5].correct_option = 'A';
-
-    questions[6].question = strdup("Quel langage de programmation est largement utilisé pour le développement de sites web dynamiques?");
-    questions[6].options[0] = strdup("A. HTML");
-    questions[6].options[1] = strdup("B. CSS");
-    questions[6].options[2] = strdup("C. SQL");
-    questions[6].options[3] = strdup("D. JavaScript");
-    questions[6].correct_option = 'D';
-
-    questions[7].question = strdup("Qu'est-ce que l'IDE signifie en programmation?");
-    questions[7].options[0] = strdup("A. Integrated Development Environment");
-    questions[7].options[1] = strdup("B. Interface Design Enhancement");
-    questions[7].options[2] = strdup("C. Interactive Development Environment");
-    questions[7].options[3] = strdup("D. Intelligent Design Engineering");
-    questions[7].correct_option = 'A';
-
-    questions[8].question = strdup("Quel est le type de données utilisé pour stocker des valeurs entières en C?");
-    questions[8].options[0] = strdup("A. float");
-    questions[8].options[1] = strdup("B. int");
-    questions[8].options[2] = strdup("C. char");
-    questions[8].options[3] = strdup("D. string");
-    questions[8].correct_option = 'B';
-
-    questions[9].question = strdup("Dans quel langage de programmation la syntaxe est-elle sensible à la casse?");
-    questions[9].options[0] = strdup("A. Python");
-    questions[9].options[1] = strdup("B. Java");
-    questions[9].options[2] = strdup("C. C++");
-    questions[9].options[3] = strdup("D. Ruby");
-    questions[9].correct_option = 'B';
+    questions[2].question = strdup("Comment créer une liste en Python?");
+    questions[2].options[0] = strdup("A. []");
+    questions[2].options[1] = strdup("B. {}");
+    questions[2].options[2] = strdup("C. ()");
+    questions[2].options[3] = strdup("D. <>");
+    questions[2].correct_option = 'A';
 
     return questions;
 }
 
+<<<<<<< Updated upstream
 void freeQuiz(QuizQuestion *questions, int size)
 {
     for (int i = 0; i < size; i++)
     {
+=======
+// Questions pour le thème Java
+QuizQuestion* createJavaQuiz(int *size) {
+    *size = 3;
+    QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
+
+    questions[0].question = strdup("Quel est le type de retour de la méthode 'main' en Java?");
+    questions[0].options[0] = strdup("A. int");
+    questions[0].options[1] = strdup("B. void");
+    questions[0].options[2] = strdup("C. String");
+    questions[0].options[3] = strdup("D. char");
+    questions[0].correct_option = 'B';
+
+    questions[1].question = strdup("Quel mot-clé est utilisé pour hériter d'une classe en Java?");
+    questions[1].options[0] = strdup("A. extends");
+    questions[1].options[1] = strdup("B. implements");
+    questions[1].options[2] = strdup("C. inherits");
+    questions[1].options[3] = strdup("D. extendsClass");
+    questions[1].correct_option = 'A';
+
+    questions[2].question = strdup("Quel est le package de base de Java?");
+    questions[2].options[0] = strdup("A. java.lang");
+    questions[2].options[1] = strdup("B. java.util");
+    questions[2].options[2] = strdup("C. java.io");
+    questions[2].options[3] = strdup("D. java.net");
+    questions[2].correct_option = 'A';
+
+    return questions;
+}
+
+// Questions pour le thème C#
+QuizQuestion* createCSharpQuiz(int *size) {
+    *size = 3;
+    QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
+
+    questions[0].question = strdup("Quel mot-clé est utilisé pour définir une propriété en C#?");
+    questions[0].options[0] = strdup("A. property");
+    questions[0].options[1] = strdup("B. prop");
+    questions[0].options[2] = strdup("C. var");
+    questions[0].options[3] = strdup("D. get; set;");
+    questions[0].correct_option = 'D';
+
+    questions[1].question = strdup("Quelle méthode est utilisée pour commencer un thread en C#?");
+    questions[1].options[0] = strdup("A. Start()");
+    questions[1].options[1] = strdup("B. Run()");
+    questions[1].options[2] = strdup("C. Begin()");
+    questions[1].options[3] = strdup("D. Execute()");
+    questions[1].correct_option = 'A';
+
+    questions[2].question = strdup("Comment déclare-t-on une constante en C#?");
+    questions[2].options[0] = strdup("A. const int x = 10;");
+    questions[2].options[1] = strdup("B. final int x = 10;");
+    questions[2].options[2] = strdup("C. static int x = 10;");
+    questions[2].options[3] = strdup("D. define x = 10;");
+    questions[2].correct_option = 'A';
+
+    return questions;
+}
+
+// Questions pour le thème C
+QuizQuestion* createCQuiz(int *size) {
+    *size = 3;
+    QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
+
+    questions[0].question = strdup("Quel est le résultat de l'expression suivante en C : 5 * 3 + 2 / 2 - 1?");
+    questions[0].options[0] = strdup("A. 15");
+    questions[0].options[1] = strdup("B. 7");
+    questions[0].options[2] = strdup("C. 8");
+    questions[0].options[3] = strdup("D. 9");
+    questions[0].correct_option = 'A';
+
+    questions[1].question = strdup("Quel est le mot-clé pour allouer de la mémoire dynamiquement en C?");
+    questions[1].options[0] = strdup("A. malloc");
+    questions[1].options[1] = strdup("B. allocate");
+    questions[1].options[2] = strdup("C. memalloc");
+    questions[1].options[3] = strdup("D. new");
+    questions[1].correct_option = 'A';
+
+    questions[2].question = strdup("Quel est l'opérateur utilisé pour accéder aux membres d'une structure via un pointeur?");
+    questions[2].options[0] = strdup("A. . (point)");
+    questions[2].options[1] = strdup("B. -> (flèche)");
+    questions[2].options[2] = strdup("C. * (étoile)");
+    questions[2].options[3] = strdup("D. & (esperluette)");
+    questions[2].correct_option = 'B';
+
+    return questions;
+}
+
+// Questions pour le thème Javascript
+QuizQuestion* createJavaScriptQuiz(int *size) {
+    *size = 3;
+    QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
+
+    questions[0].question = strdup("Quel mot-clé est utilisé pour déclarer une variable en Javascript?");
+    questions[0].options[0] = strdup("A. var");
+    questions[0].options[1] = strdup("B. int");
+    questions[0].options[2] = strdup("C. let");
+    questions[0].options[3] = strdup("D. var et let");
+    questions[0].correct_option = 'D';
+
+    questions[1].question = strdup("Comment crée-t-on une fonction anonyme en Javascript?");
+    questions[1].options[0] = strdup("A. function() {}");
+    questions[1].options[1] = strdup("B. anonymous function() {}");
+    questions[1].options[2] = strdup("C. () => {}");
+    questions[1].options[3] = strdup("D. function => {}");
+    questions[1].correct_option = 'A';
+
+    questions[2].question = strdup("Quel est l'opérateur de concaténation de chaînes en Javascript?");
+    questions[2].options[0] = strdup("A. +");
+    questions[2].options[1] = strdup("B. &");
+    questions[2].options[2] = strdup("C. .");
+    questions[2].options[3] = strdup("D. =");
+    questions[2].correct_option = 'A';
+
+    return questions;
+}
+
+// Libère la mémoire des questions
+void freeQuiz(QuizQuestion *questions, int size) {
+    for (int i = 0; i < size; i++) {
+>>>>>>> Stashed changes
         free(questions[i].question);
         for (int j = 0; j < 4; j++)
         {
