@@ -3,8 +3,6 @@
 #include <string.h>
 #include "quiz.h"
 
-//Test
-
 QuizQuestion* createQuiz(int *size) {
     *size = 3;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
