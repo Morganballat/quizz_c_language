@@ -1,15 +1,16 @@
 #ifndef QUIZ_H
 #define QUIZ_H
 
-typedef struct {
+typedef struct
+{
     char *question;
     char *options[4];
     char correct_option;
 } QuizQuestion;
 
-QuizQuestion* createQuiz(int *size);
+QuizQuestion *createQuiz(int *size);
 void freeQuiz(QuizQuestion *questions, int size);
-char askQuestion(QuizQuestion *q);
+char askQuestion(QuizQuestion *q, int questionNumber);
 void startQuiz(QuizQuestion *questions, int size);
 
 #endif // QUIZ_H

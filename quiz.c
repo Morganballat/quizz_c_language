@@ -3,7 +3,8 @@
 #include <string.h>
 #include "quiz.h"
 
-QuizQuestion* createQuiz(int *size) {
+QuizQuestion *createQuiz(int *size)
+{
     *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
@@ -80,36 +81,46 @@ QuizQuestion* createQuiz(int *size) {
     return questions;
 }
 
-void freeQuiz(QuizQuestion *questions, int size) {
-    for (int i = 0; i < size; i++) {
+void freeQuiz(QuizQuestion *questions, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         free(questions[i].question);
-        for (int j = 0; j < 4; j++) {
+        for (int j = 0; j < 4; j++)
+        {
             free(questions[i].options[j]);
         }
     }
     free(questions);
 }
 
-char askQuestion(QuizQuestion *q) {
-    printf("%s\n", q->question);
-    for (int i = 0; i < 4; i++) {
+char askQuestion(QuizQuestion *q, int questionNumber)
+{
+    printf("Question %d: %s\n", questionNumber + 1, q->question);
+    for (int i = 0; i < 4; i++)
+    {
         printf("%s\n", q->options[i]);
     }
     printf("Votre réponse (A, B, C, D) : ");
-    
+
     char answer;
     scanf(" %c", &answer);
     return answer;
 }
 
-void startQuiz(QuizQuestion *questions, int size) {
+void startQuiz(QuizQuestion *questions, int size)
+{
     int score = 0;
-    for (int i = 0; i < size; i++) {
-        char userAnswer = askQuestion(&questions[i]);
-        if (userAnswer == questions[i].correct_option) {
+    for (int i = 0; i < size; i++)
+    {
+        char userAnswer = askQuestion(&questions[i], i);
+        if (userAnswer == questions[i].correct_option)
+        {
             printf("Correct!\n");
             score++;
-        } else {
+        }
+        else
+        {
             printf("Incorrect. La bonne réponse était %c.\n", questions[i].correct_option);
         }
         printf("\n");
