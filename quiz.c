@@ -14,6 +14,8 @@ QuizQuestion* createQuiz(int *size) {
     questions[0].options[3] = strdup("D. Rome");
     questions[0].correct_option = 'A';
 
+    // Question 2
+
     questions[1].question = strdup("Combien de bits y a-t-il dans un octet?");
     questions[1].options[0] = strdup("A. 4");
     questions[1].options[1] = strdup("B. 8");
