@@ -4,7 +4,7 @@
 #include "quiz.h"
 
 QuizQuestion* createQuiz(int *size) {
-    *size = 3;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel est le résultat de l'expression suivante en Python : 5 * 3 + 2 / 2 - 1?");
@@ -13,8 +13,6 @@ QuizQuestion* createQuiz(int *size) {
     questions[0].options[2] = strdup("C. 8");
     questions[0].options[3] = strdup("D. 9");
     questions[0].correct_option = 'C';
-
-    // Question 2
 
     questions[1].question = strdup("Combien de bits y a-t-il dans un octet?");
     questions[1].options[0] = strdup("A. 4");
