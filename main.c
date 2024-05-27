@@ -15,6 +15,11 @@ void display_ascii() {
 int main() {
     display_ascii(); 
 
+    printf("Bienvenue dans notre quiz!\n");
+
+    printf("Appuyez sur une touche pour commencer...\n");
+    getchar();
+
     int size;
     QuizQuestion *questions = createQuiz(&size);
     startQuiz(questions, size);
