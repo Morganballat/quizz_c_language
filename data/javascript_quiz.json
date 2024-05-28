@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Quel mot-clé est utilisé pour déclarer une variable en Javascript?",
+        "options": ["A. var", "B. int", "C. let", "D. var et let"],
+        "correct_option": "D"
+    },
+    {
+        "question": "Comment crée-t-on une fonction anonyme en Javascript?",
+        "options": ["A. function() {}", "B. anonymous function() {}", "C. () => {}", "D. function => {}"],
+        "correct_option": "A"
+    },
+    {
+        "question": "Quel est l'opérateur de concaténation de chaînes en Javascript?",
+        "options": ["A. +", "B. &", "C. .", "D. ="],
+        "correct_option": "A"
+    }
+]

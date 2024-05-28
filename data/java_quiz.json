@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Quel est le type de retour de la méthode 'main' en Java?",
+        "options": ["A. int", "B. void", "C. String", "D. char"],
+        "correct_option": "B"
+    },
+    {
+        "question": "Quel mot-clé est utilisé pour hériter d'une classe en Java?",
+        "options": ["A. extends", "B. implements", "C. inherits", "D. extendsClass"],
+        "correct_option": "A"
+    },
+    {
+        "question": "Quel est le package de base de Java?",
+        "options": ["A. java.lang", "B. java.util", "C. java.io", "D. java.net"],
+        "correct_option": "A"
+    }
+]

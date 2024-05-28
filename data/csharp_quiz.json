@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Quel mot-clé est utilisé pour définir une propriété en C#?",
+        "options": ["A. property", "B. prop", "C. var", "D. get; set;"],
+        "correct_option": "D"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour commencer un thread en C#?",
+        "options": ["A. Start()", "B. Run()", "C. Begin()", "D. Execute()"],
+        "correct_option": "A"
+    },
+    {
+        "question": "Comment déclare-t-on une constante en C#?",
+        "options": ["A. const int x = 10;", "B. final int x = 10;", "C. static int x = 10;", "D. define x = 10;"],
+        "correct_option": "A"
+    }
+]

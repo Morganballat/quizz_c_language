@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Quel est le résultat de l'expression suivante en Python : 5 * 3 + 2 / 2 - 1?",
+        "options": ["A. 15", "B. 7", "C. 8", "D. 9"],
+        "correct_option": "A"
+    },
+    {
+        "question": "Quel mot-clé est utilisé pour définir une fonction en Python?",
+        "options": ["A. func", "B. def", "C. function", "D. define"],
+        "correct_option": "B"
+    },
+    {
+        "question": "Comment créer une liste en Python?",
+        "options": ["A. []", "B. {}", "C. ()", "D. <>"],
+        "correct_option": "A"
+    }
+]
