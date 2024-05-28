@@ -16,5 +16,5 @@ QuizQuestion *createJavaScriptQuiz(int *size);
 void freeQuiz(QuizQuestion *questions, int size);
 char askQuestion(QuizQuestion *q, int questionNumber);
 void startQuiz(QuizQuestion *questions, int size);
-
+double get_time();
 #endif

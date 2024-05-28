@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "quiz.h"
+#include <time.h>
+#include <sys/time.h>
 
 QuizQuestion *createPythonQuiz(int *size)
 {
@@ -170,30 +172,39 @@ char askQuestion(QuizQuestion *q, int questionNumber)
     }
 
     char answer;
-    while (1)
+    do
     {
         printf("Votre réponse (a, b, c, d) : ");
         if (scanf(" %c", &answer) != 1 || (answer != 'a' && answer != 'b' && answer != 'c' && answer != 'd'))
         {
             printf("Réponse invalide. Veuillez entrer a, b, c ou d.\n");
             while (getchar() != '\n')
-                ; // vider le tampon d'entrée
+            {
+            } // vider le tampon d'entrée
         }
         else
         {
-            while (getchar() != '\n')
-                ; // vider le tampon d'entrée
-            return answer;
+            break; // Sort de la boucle si la réponse est valide
         }
-    }
+    } while (1);
+
+    return answer;
 }
 
 void startQuiz(QuizQuestion *questions, int size)
 {
     int score = 0;
+    double start, end;
+    double total_time = 0.0;
+
     for (int i = 0; i < size; i++)
     {
+        start = get_time();
         char userAnswer = askQuestion(&questions[i], i);
+        end = get_time();
+        double time_taken = (end - start);
+        total_time += time_taken;
+
         if (userAnswer == questions[i].correct_option)
         {
             printf("correct!\n");
@@ -203,7 +214,16 @@ void startQuiz(QuizQuestion *questions, int size)
         {
             printf("Incorrect. La bonne réponse était %c.\n", questions[i].correct_option);
         }
-        printf("\n");
+        printf("Temps pris pour cette question: %.1f secondes\n\n", time_taken);
     }
+
+    printf("Temps total pris pour le quiz: %.1f secondes\n", total_time);
     printf("Vous avez obtenu %d sur %d bonnes réponses.\n", score, size);
+}
+
+double get_time()
+{
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return (double)tv.tv_sec + (double)tv.tv_usec / 1000000.0;
 }
