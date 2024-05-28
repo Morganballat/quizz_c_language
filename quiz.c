@@ -184,7 +184,7 @@ char askQuestion(QuizQuestion *q, int questionNumber)
         }
         else
         {
-            break; // Sort de la boucle si la réponse est valide
+            break;
         }
     } while (1);
 
