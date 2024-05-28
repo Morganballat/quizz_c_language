@@ -28,7 +28,7 @@ int getUserChoice()
         else
         {
             while (getchar() != '\n')
-                ; // vider le tampon d'entrée
+                ;
             return choice;
         }
     }
@@ -80,8 +80,8 @@ int main()
     }
 
     printf("Appuyez sur la touche entrée pour commencer...\n");
-    getchar(); // Pour capturer le '\n' laissé par scanf
-    getchar(); // Pour attendre que l'utilisateur appuie sur une touche
+    getchar();
+    getchar();
 
     startQuiz(questions, size);
     freeQuiz(questions, size);

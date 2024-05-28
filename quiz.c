@@ -3,7 +3,6 @@
 #include <string.h>
 #include "quiz.h"
 
-// Questions pour le thème Python
 QuizQuestion *createPythonQuiz(int *size)
 {
     *size = 3;
@@ -33,7 +32,6 @@ QuizQuestion *createPythonQuiz(int *size)
     return questions;
 }
 
-// Questions pour le thème Java
 QuizQuestion *createJavaQuiz(int *size)
 {
     *size = 3;
@@ -63,7 +61,6 @@ QuizQuestion *createJavaQuiz(int *size)
     return questions;
 }
 
-// Questions pour le thème C#
 QuizQuestion *createCSharpQuiz(int *size)
 {
     *size = 3;
@@ -93,7 +90,6 @@ QuizQuestion *createCSharpQuiz(int *size)
     return questions;
 }
 
-// Questions pour le thème C
 QuizQuestion *createCQuiz(int *size)
 {
     *size = 3;
@@ -123,7 +119,6 @@ QuizQuestion *createCQuiz(int *size)
     return questions;
 }
 
-// Questions pour le thème Javascript
 QuizQuestion *createJavaScriptQuiz(int *size)
 {
     *size = 3;
@@ -153,7 +148,6 @@ QuizQuestion *createJavaScriptQuiz(int *size)
     return questions;
 }
 
-// Libère la mémoire des questions
 void freeQuiz(QuizQuestion *questions, int size)
 {
     for (int i = 0; i < size; i++)
