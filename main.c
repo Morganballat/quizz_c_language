@@ -3,12 +3,12 @@
 
 void display_ascii()
 {
-    printf(" ________              ___________      .__      .__        \n");
+    printf(" ________                 __________      .__      .__        \n");
     printf(" \\______ \\   _______  _\\__    __/_______|__|__  _|__|____   \n");
     printf("  |   |  \\_/ __ \\  \\/ /  |    |  \\_  __ \\  \\  \\/ /  \\__  \\  \n");
-    printf("  |   `   \\  ___/\\   /   |    |   |  | \\/  |\\   /|  |/ __ \\_\n");
-    printf(" /______  /\\___  >\\_/    |____|   |__|  |__| \\_/ |__(____  /\\ \n");
-
+    printf("  |   `   \\  ___/\\   /    |    |   |  | \\/  |\\   /|  |/ __ \\_\n");
+    printf(" /______  /\\___  >\\_/     |____|   |__|  |__| \\_/ |__(____  / \n");
+    printf("        \\/     \\/                                        \\/  \n");
     printf("_____________________________________________________________________\n");
     printf("\n");
 }
@@ -61,18 +61,23 @@ int main()
     {
     case 1:
         questions = createPythonQuiz(&size);
+        printf("Vous avez choisi le quiz sur Python.\n\n");
         break;
     case 2:
         questions = createJavaQuiz(&size);
+        printf("Vous avez choisi le quiz sur Java.\n");
         break;
     case 3:
         questions = createCSharpQuiz(&size);
+        printf("Vous avez choisi le quiz sur C#.\n");
         break;
     case 4:
         questions = createCQuiz(&size);
+        printf("Vous avez choisi le quiz sur C.\n");
         break;
     case 5:
         questions = createJavaScriptQuiz(&size);
+        printf("Vous avez choisi le quiz sur Javascript.\n");
         break;
     default:
         printf("Choix invalide.\n");
@@ -80,7 +85,6 @@ int main()
     }
 
     printf("Appuyez sur la touche entrée pour commencer...\n");
-    getchar();
     getchar();
 
     startQuiz(questions, size);
