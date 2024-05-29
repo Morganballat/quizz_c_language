@@ -7,11 +7,10 @@
 
 QuizQuestion *createPythonQuiz(int *size)
 {
-    *size = 5;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
-    printf(" ____________________________________\n");
-    questions[0].question = strdup("-- Quel est le résultat de l'expression suivante en Python : 5 * 3 + 2 / 2 - 1? --");
+    questions[0].question = strdup("Quel est le résultat de l'expression suivante en Python : 5 * 3 + 2 / 2 - 1?");
     questions[0].options[0] = strdup("a. 15");
     questions[0].options[1] = strdup("b. 7");
     questions[0].options[2] = strdup("c. 8");
@@ -96,7 +95,7 @@ QuizQuestion *createPythonQuiz(int *size)
 
 QuizQuestion *createJavaQuiz(int *size)
 {
-    *size = 5;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel est le type de retour de la méthode 'main' en Java?");
@@ -127,17 +126,17 @@ QuizQuestion *createJavaQuiz(int *size)
     questions[3].options[0] = strdup("a. class");
     questions[3].options[1] = strdup("b. Class");
     questions[3].options[2] = strdup("c. className");
-    questions[3].options[3] = strdup("d. cls");
+    questions[3].options[3] = strdup("d. classDefinition");
     questions[3].correct_option = 'a';
-    strcpy(questions[3].explication, "En Java, le mot-clé 'class' est utilisé pour déclarer une classe. Par exemple, public class MaClasse {}");
+    strcpy(questions[3].explication, "En Java, le mot-clé 'class' est utilisé pour déclarer une classe. Par exemple, public class MaClasse {}.");
 
-    questions[4].question = strdup("Comment instancier une classe en Java?");
-    questions[4].options[0] = strdup("a. new ClassName();");
-    questions[4].options[1] = strdup("b. ClassName();");
-    questions[4].options[2] = strdup("c. instantiate ClassName();");
-    questions[4].options[3] = strdup("d. ClassName = new();");
-    questions[4].correct_option = 'a';
-    strcpy(questions[4].explication, "En Java, vous instanciez une classe en utilisant le mot-clé 'new'. Par exemple, MaClasse maClasse = new MaClasse();");
+    questions[4].question = strdup("Quel est le type d'une variable déclarée avec 'String' en Java?");
+    questions[4].options[0] = strdup("a. char");
+    questions[4].options[1] = strdup("b. String");
+    questions[4].options[2] = strdup("c. char[]");
+    questions[4].options[3] = strdup("d. int");
+    questions[4].correct_option = 'b';
+    strcpy(questions[4].explication, "En Java, 'String' est une classe qui représente une chaîne de caractères.");
 
     questions[5].question = strdup("Quel mot-clé est utilisé pour déclarer une constante en Java?");
     questions[5].options[0] = strdup("a. const");
@@ -145,39 +144,39 @@ QuizQuestion *createJavaQuiz(int *size)
     questions[5].options[2] = strdup("c. static");
     questions[5].options[3] = strdup("d. constant");
     questions[5].correct_option = 'b';
-    strcpy(questions[5].explication, "En Java, le mot-clé 'final' est utilisé pour déclarer une constante. Par exemple, public static final int MA_CONSTANTE = 10;");
+    strcpy(questions[5].explication, "En Java, le mot-clé 'final' est utilisé pour déclarer une constante. Par exemple, final int MA_CONSTANTE = 10;");
 
-    questions[6].question = strdup("Quel est le type de base pour une chaîne de caractères en Java?");
-    questions[6].options[0] = strdup("a. char");
-    questions[6].options[1] = strdup("b. String");
-    questions[6].options[2] = strdup("c. text");
-    questions[6].options[3] = strdup("d. str");
-    questions[6].correct_option = 'b';
-    strcpy(questions[6].explication, "En Java, le type de base pour une chaîne de caractères est 'String'. Par exemple, String maChaine = \"Hello\";");
+    questions[6].question = strdup("Quel est le résultat de l'expression suivante: 10 % 3 en Java?");
+    questions[6].options[0] = strdup("a. 1");
+    questions[6].options[1] = strdup("b. 2");
+    questions[6].options[2] = strdup("c. 3");
+    questions[6].options[3] = strdup("d. 4");
+    questions[6].correct_option = 'a';
+    strcpy(questions[6].explication, "L'opérateur '%' est utilisé pour obtenir le reste de la division en Java. Par conséquent, 10 % 3 est égal à 1.");
 
-    questions[7].question = strdup("Quelle est la méthode utilisée pour démarrer un thread en Java?");
-    questions[7].options[0] = strdup("a. start()");
-    questions[7].options[1] = strdup("b. run()");
-    questions[7].options[2] = strdup("c. execute()");
-    questions[7].options[3] = strdup("d. begin()");
-    questions[7].correct_option = 'a';
-    strcpy(questions[7].explication, "En Java, la méthode 'start()' est utilisée pour démarrer un thread. Par exemple, monThread.start();");
+    questions[7].question = strdup("Comment crée-t-on un objet en Java?");
+    questions[7].options[0] = strdup("a. MaClasse obj = MaClasse();");
+    questions[7].options[1] = strdup("b. MaClasse obj = new MaClasse();");
+    questions[7].options[2] = strdup("c. MaClasse obj = create MaClasse();");
+    questions[7].options[3] = strdup("d. MaClasse obj = MaClasse.new();");
+    questions[7].correct_option = 'b';
+    strcpy(questions[7].explication, "En Java, on utilise le mot-clé 'new' pour créer un nouvel objet. Par exemple, MaClasse obj = new MaClasse();");
 
-    questions[8].question = strdup("Quelle est la méthode utilisée pour obtenir la longueur d'un tableau en Java?");
-    questions[8].options[0] = strdup("a. length()");
-    questions[8].options[1] = strdup("b. size()");
-    questions[8].options[2] = strdup("c. getLength()");
-    questions[8].options[3] = strdup("d. arrayLength()");
+    questions[8].question = strdup("Quel est le résultat de l'expression suivante: 'hello' + 'world' en Java?");
+    questions[8].options[0] = strdup("a. helloworld");
+    questions[8].options[1] = strdup("b. hello world");
+    questions[8].options[2] = strdup("c. hello\nworld");
+    questions[8].options[3] = strdup("d. hello-world");
     questions[8].correct_option = 'a';
-    strcpy(questions[8].explication, "En Java, la propriété 'length' est utilisée pour obtenir la longueur d'un tableau. Par exemple, int taille = monTableau.length;");
+    strcpy(questions[8].explication, "En Java, l'opérateur '+' est utilisé pour concaténer des chaînes. Par conséquent, 'hello' + 'world' est égal à 'helloworld'.");
 
-    questions[9].question = strdup("Comment déclare-t-on une méthode statique en Java?");
-    questions[9].options[0] = strdup("a. static void myMethod()");
-    questions[9].options[1] = strdup("b. void static myMethod()");
-    questions[9].options[2] = strdup("c. static: void myMethod()");
-    questions[9].options[3] = strdup("d. void myMethod() static");
+    questions[9].question = strdup("Quel mot-clé est utilisé pour importer un package en Java?");
+    questions[9].options[0] = strdup("a. import");
+    questions[9].options[1] = strdup("b. include");
+    questions[9].options[2] = strdup("c. require");
+    questions[9].options[3] = strdup("d. package");
     questions[9].correct_option = 'a';
-    strcpy(questions[9].explication, "En Java, vous déclarez une méthode statique en utilisant le mot-clé 'static'. Par exemple, public static void maMethode() {}");
+    strcpy(questions[9].explication, "En Java, le mot-clé 'import' est utilisé pour importer un package. Par exemple, import java.util.Scanner;");
 
     return questions;
 }
@@ -448,6 +447,7 @@ QuizQuestion *createJavaScriptQuiz(int *size)
     return questions;
 }
 
+
 void freeQuiz(QuizQuestion *questions, int size)
 {
     for (int i = 0; i < size; i++)
@@ -505,14 +505,17 @@ void startQuiz(QuizQuestion *questions, int size)
 
         if (userAnswer == questions[i].correct_option)
         {
+            printf("______________________\n");
             printf("Bonne réponse !\n");
+            printf("______________________\n");
             score++;
         }
         else
         {
             printf("Mauvaise réponse. La bonne réponse était %c.\n", questions[i].correct_option);
         }
-        printf("Explication: %s\n", question.explication);
+        printf("Explication: %s\n", questions[i].explication);
+        printf("______________________\n");
         printf("Temps pris pour cette question: %.1f secondes\n\n", time_taken);
     }
 
