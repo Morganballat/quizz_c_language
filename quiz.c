@@ -183,7 +183,7 @@ QuizQuestion *createJavaQuiz(int *size)
 
 QuizQuestion *createCSharpQuiz(int *size)
 {
-    *size = 5;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel mot-clé est utilisé pour définir une propriété en C#?");
@@ -193,8 +193,6 @@ QuizQuestion *createCSharpQuiz(int *size)
     questions[0].options[3] = strdup("d. get; set;");
     questions[0].correct_option = 'd';
     strcpy(questions[9].explication, "En C#, vous définissez une propriété en utilisant les mots-clés 'get' et 'set'. Par exemple, public int MaPropriete { get; set; }");
-
-    
 
     questions[1].question = strdup("Quelle méthode est utilisée pour commencer un thread en C#?");
     questions[1].options[0] = strdup("a. Start()");
@@ -273,7 +271,7 @@ QuizQuestion *createCSharpQuiz(int *size)
 
 QuizQuestion *createCQuiz(int *size)
 {
-    *size = 5;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel est le résultat de l'expression suivante en C : 5 * 3 + 2 / 2 - 1?");
@@ -361,7 +359,7 @@ QuizQuestion *createCQuiz(int *size)
 
 QuizQuestion *createJavaScriptQuiz(int *size)
 {
-    *size = 5;
+    *size = 10;
     QuizQuestion *questions = malloc(*size * sizeof(QuizQuestion));
 
     questions[0].question = strdup("Quel mot-clé est utilisé pour déclarer une variable en Javascript?");
@@ -447,7 +445,6 @@ QuizQuestion *createJavaScriptQuiz(int *size)
     return questions;
 }
 
-
 void freeQuiz(QuizQuestion *questions, int size)
 {
     for (int i = 0; i < size; i++)
@@ -524,7 +521,6 @@ void startQuiz(QuizQuestion *questions, int size)
     printf("Temps total pris pour le quiz: %.1f secondes\n", total_time);
     printf("Vous avez obtenu %d sur %d bonnes réponses.\n", score, size);
 }
-
 
 double get_time()
 {
