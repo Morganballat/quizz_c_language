@@ -6,6 +6,7 @@ typedef struct
     char *question;
     char *options[4];
     char correct_option;
+    char explication[512];
 } QuizQuestion;
 
 QuizQuestion *createPythonQuiz(int *size);
