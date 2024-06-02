@@ -23,7 +23,7 @@ int getUserChoice()
         {
             printf("Choix invalide. Veuillez entrer un nombre entre 1 et 5.\n");
             while (getchar() != '\n')
-                ; // vider le tampon d'entrée
+                ; 
         }
         else
         {
